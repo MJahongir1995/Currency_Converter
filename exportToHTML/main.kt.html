@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>main.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #fcfcfa;}
+.s1 { color: #939293;}
+.s2 { color: #ff6188; font-style: italic;}
+.s3 { color: #ff6188;}
+.s4 { color: #ffd866;}
+.s5 { color: #78dce8;}
+.s6 { color: #727072; font-style: italic;}
+.s7 { color: #ab9df2;}
+</style>
+</head>
+<body bgcolor="#2d2a2e">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">import java</span><span class="s1">.</span><span class="s0">util</span><span class="s1">.</span><span class="s0">Scanner</span>
+
+<span class="s2">fun </span><span class="s0">main</span><span class="s1">(){</span>
+
+    <span class="s2">val </span><span class="s0">scan </span><span class="s3">= </span><span class="s0">Scanner</span><span class="s1">(</span><span class="s0">System</span><span class="s1">.</span><span class="s0">`in`</span><span class="s1">)</span>
+    <span class="s2">val </span><span class="s0">myService </span><span class="s3">= </span><span class="s0">MyService</span><span class="s1">()</span>
+    <span class="s0">myService</span><span class="s1">.</span><span class="s0">loadData</span><span class="s1">()</span>
+
+    <span class="s2">while</span><span class="s1">(</span><span class="s2">true</span><span class="s1">){</span>
+        <span class="s0">println</span><span class="s1">(</span><span class="s4">&quot;1-&gt; So'm to currency&quot; </span><span class="s3">+</span>
+                <span class="s4">&quot;</span><span class="s5">\n</span><span class="s4">2-&gt; Currency to so'm&quot; </span><span class="s3">+</span>
+                <span class="s4">&quot;</span><span class="s5">\n</span><span class="s4">3-&gt; Max Currency&quot; </span><span class="s3">+ </span><span class="s6">// sizdagi ma'lum davlat valyutasiga qancha so'm olish mumkin</span>
+                <span class="s4">&quot;</span><span class="s5">\n</span><span class="s4">4-&gt; Max som-&gt; currency&quot;</span><span class="s1">) </span><span class="s6">// sizdagi ma'lum bir so'mga, ma'lum bir davlatning qancha valyutasini </span>
+                                           <span class="s6">//  olish mumkin</span>
+
+        <span class="s2">when</span><span class="s1">(</span><span class="s0">scan</span><span class="s1">.</span><span class="s0">nextInt</span><span class="s1">()){</span>
+            <span class="s7">1</span><span class="s3">-&gt; </span><span class="s0">myService</span><span class="s1">.</span><span class="s0">somToCurrency</span><span class="s1">()</span>
+            <span class="s7">2</span><span class="s3">-&gt; </span><span class="s0">myService</span><span class="s1">.</span><span class="s0">currencyToSom</span><span class="s1">()</span>
+            <span class="s7">3</span><span class="s3">-&gt; </span><span class="s0">myService</span><span class="s1">.</span><span class="s0">maxCurrency</span><span class="s1">()</span>
+            <span class="s7">4</span><span class="s3">-&gt; </span><span class="s0">myService</span><span class="s1">.</span><span class="s0">maxSomCurrency</span><span class="s1">()</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
